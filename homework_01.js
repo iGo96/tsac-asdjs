@@ -1,4 +1,4 @@
-function sumArray(array){
+function ex_01_I(array){
 	//Dato un array di interi, restituire la loro somma fino a che non viene ritrovato un valore negativo. 
 	//itterativo
 	//spazio: O(1)
@@ -11,7 +11,7 @@ function sumArray(array){
 	return array;
 }
 
-function sumArrayR(array){
+function ex_01_R(array){
 	//spazio: O(n)
 	//tempo: O(n)
 	if (array[i]>=0){
@@ -22,7 +22,7 @@ function sumArrayR(array){
 	}
 }
 /////////////////////////////////////////////////////////////////////////
-function sumIntDisp(n){
+function ex_02_I(n){
 	//Dato un numero n, restituire la somma dei primi n numeri interi positivi dispari 
 	//itterativo
 	for (i=0;i<n;i++){
@@ -30,11 +30,11 @@ function sumIntDisp(n){
 	}
 }
 
-function sumIntDispR(n){
+function ex_02_R(n){
 
 }
 /////////////////////////////////////////////////////////////////////////
-function avg(array){
+function ex_03_I(array){
 	//Dato un array di 10 elementi, calcolarne la media 
 	//itterativo
 	nVal = array.length;
@@ -44,11 +44,11 @@ function avg(array){
 	return array/nVal;
 }
 
-function avgR(array){
+function ex_o3_R(array){
 	
 }
 /////////////////////////////////////////////////////////////////////////
-function sum(a,b){
+function ex_04_I(a,b){
 	//Dato un intervallo [a, b] con a e b due interi positivi, restituire la somma di tutti i numeri 
 	//compresi all’interno dell’intervallo, estremi inclusi. Nel caso che b fosse minore di a, 
 	//calcolare la somma nell’intervallo [b,a] 
@@ -69,7 +69,7 @@ function sum(a,b){
 	return a;
 }
 
-function sumR(a,b){
+function ex_04_R(a,b){
 	if (b>a){
 		var c=a;
 		a=b;
@@ -83,7 +83,7 @@ function sumR(a,b){
 	}
 }
 /////////////////////////////////////////////////////////////////////////
-function mult(a,b){
+function ex_05_I(a,b){
 	//Si calcoli il prodotto di due numeri a, b maggiori o uguali a zero, tramite l’utilizzo del solo 
 	//operatore somma. 
 	//Esempio: 
@@ -101,7 +101,7 @@ function mult(a,b){
 }
 
 
-function multR(a,b){
+function ex_05_R(a,b){
 	//Si calcoli il prodotto di due numeri a, b maggiori o uguali a zero, tramite l’utilizzo del solo 
 	//operatore somma. 
 	//Esempio: 
@@ -119,7 +119,7 @@ function multR(a,b){
 	}
 }
 /////////////////////////////////////////////////////////////////////////
-function div(dividendo,divisore){
+function ex_06_I(dividendo,divisore){
 	//Si calcoli la divisione e il resto della divisione tra due numeri a, b maggiori a zero, tramite 
 	//l’utilizzo dei soli operatori somma e sottrazione. 
 	//Esempio: 
@@ -133,7 +133,7 @@ function div(dividendo,divisore){
 	return [i,dividendo]; //primo val: risultato ; secondo val: resto
 }
 
-function divR(dividendo,divisore){
+function ex_06_R(dividendo,divisore){
 	//Si calcoli la divisione e il resto della divisione tra due numeri a, b maggiori a zero, tramite 
 	//l’utilizzo dei soli operatori somma e sottrazione. 
 	//Esempio: 
@@ -148,7 +148,7 @@ function divR(dividendo,divisore){
 	}
 }
 /////////////////////////////////////////////////////////////////////////
-function pow(b,e){
+function ex_07_I(b,e){
 	//Si calcoli la potenza (x^y) di due numeri x y maggiori o uguali a zero, tramite l’utilizzo dei soli 
 	//operatori somma, sottrazione e della funzione mult. 
 	//.Esempio: 
@@ -161,7 +161,7 @@ function pow(b,e){
 	return b;
 }
 
-function powR(b,e){
+function ex_07_R(b,e){
 	//spazio: O()
 	//tempo:O()
 	if(e>0) {
@@ -172,7 +172,7 @@ function powR(b,e){
 	}
 }
 /////////////////////////////////////////////////////////////////////////
-function ArrToMatrix(array) {
+function ex_08_I(array) {
 	//Dato un array contenente n^2 elementi, scrivere un algoritmo che permetta di inserire tutti gli 
 	//oggetti in un array bidimensionale n x n
 	//spazio: O()
@@ -186,7 +186,7 @@ function ArrToMatrix(array) {
 	}
 }
 
-function ArrToMatrixR(array) {
+function ex_08_R(array) {
 	//spazio: O()
 	//tempo:O()
 	l = sqrt(array.length);
