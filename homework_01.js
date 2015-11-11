@@ -1,4 +1,4 @@
-function ex_01_I(array){
+function sumArray(array){
 	//Dato un array di interi, restituire la loro somma fino a che non viene ritrovato un valore negativo. 
 	//itterativo
 	//spazio: O(1)
@@ -11,7 +11,7 @@ function ex_01_I(array){
 	return array;
 }
 
-function ex_01_R(array){
+function sumArrayR(array){
 	//spazio: O(n)
 	//tempo: O(n)
 	if (array[i]>=0){
@@ -21,8 +21,17 @@ function ex_01_R(array){
 		return array;
 	}
 }
+
+//Per Tiziano;
+function ex_1_I(array){
+	return sumArray(array);
+}
+//Per Tiziano;
+function ex_1_R(array){
+	return sumArrayR(array);
+}
 /////////////////////////////////////////////////////////////////////////
-function ex_02_I(n){
+function sumDisp(n){
 	//Dato un numero n, restituire la somma dei primi n numeri interi positivi dispari 
 	//itterativo
 	for (i=0;i<n;i++){
@@ -30,11 +39,20 @@ function ex_02_I(n){
 	}
 }
 
-function ex_02_R(n){
+function sumDispR(n){
 
 }
+
+//Per Tiziano;
+function ex_2_I(n){
+	return sumDisp(n);
+}
+//Per Tiziano;
+function ex_2_I(n){
+	return sumDispR(n);
+}
 /////////////////////////////////////////////////////////////////////////
-function ex_03_I(array){
+function avg(array){
 	//Dato un array di 10 elementi, calcolarne la media 
 	//itterativo
 	nVal = array.length;
@@ -44,11 +62,20 @@ function ex_03_I(array){
 	return array/nVal;
 }
 
-function ex_o3_R(array){
+function avgR(array){
 	
 }
+
+//Per Tiziano:
+function ex_3_I(array){
+	return avg(array);
+}
+//Per Tiziano:
+function ex_3_R(array){
+	return avgR(array);
+}
 /////////////////////////////////////////////////////////////////////////
-function ex_04_I(a,b){
+function sumInterval(a,b){
 	//Dato un intervallo [a, b] con a e b due interi positivi, restituire la somma di tutti i numeri 
 	//compresi all’interno dell’intervallo, estremi inclusi. Nel caso che b fosse minore di a, 
 	//calcolare la somma nell’intervallo [b,a] 
@@ -69,7 +96,7 @@ function ex_04_I(a,b){
 	return a;
 }
 
-function ex_04_R(a,b){
+function sumIntervalR(a,b){
 	if (b>a){
 		var c=a;
 		a=b;
@@ -82,8 +109,17 @@ function ex_04_R(a,b){
 		return a;
 	}
 }
+
+//Per Tiziano:
+function ex_4_I(a,b){
+	return sumInterval(a,b);
+}
+//Per Tiziano:
+function ex_4_R(a,b){
+	return sumIntervalR(a,b);
+}
 /////////////////////////////////////////////////////////////////////////
-function ex_05_I(a,b){
+function MultSum(a,b){
 	//Si calcoli il prodotto di due numeri a, b maggiori o uguali a zero, tramite l’utilizzo del solo 
 	//operatore somma. 
 	//Esempio: 
@@ -101,13 +137,12 @@ function ex_05_I(a,b){
 }
 
 
-function ex_05_R(a,b){
+function MultSumR(a,b){
 	//Si calcoli il prodotto di due numeri a, b maggiori o uguali a zero, tramite l’utilizzo del solo 
 	//operatore somma. 
 	//Esempio: 
 	//mult(2, 3) => 6 
-	//ricorsiv
-	o
+	//ricorsivo
 	if((a=0)||(b=0)){
 		return 0;
 	}
@@ -118,8 +153,17 @@ function ex_05_R(a,b){
 		return a + mult(a, b--);
 	}
 }
+
+//Per Tiziano:
+function ex_5_I(a,b){
+	return MultSum(a,b);
+}
+//Per Tiziano:
+function ex_5_R(a,b){
+	return MultSumR(a,b);
+}
 /////////////////////////////////////////////////////////////////////////
-function ex_06_I(dividendo,divisore){
+function DivSub(dividendo,divisore){
 	//Si calcoli la divisione e il resto della divisione tra due numeri a, b maggiori a zero, tramite 
 	//l’utilizzo dei soli operatori somma e sottrazione. 
 	//Esempio: 
@@ -133,7 +177,7 @@ function ex_06_I(dividendo,divisore){
 	return [i,dividendo]; //primo val: risultato ; secondo val: resto
 }
 
-function ex_06_R(dividendo,divisore){
+function DivSubR(dividendo,divisore){
 	//Si calcoli la divisione e il resto della divisione tra due numeri a, b maggiori a zero, tramite 
 	//l’utilizzo dei soli operatori somma e sottrazione. 
 	//Esempio: 
@@ -147,8 +191,16 @@ function ex_06_R(dividendo,divisore){
 		return dividendo - div(dividendo,divisore-1);
 	}
 }
+//Per Tiziano:
+function ex_6_I(dividendo,divisore){
+	return DivSub(dividendo,divisore);
+}
+//Per Tiziano:
+function ex_6_R(dividendo,divisore){
+	return DivSub(dividendo,divisore);
+}
 /////////////////////////////////////////////////////////////////////////
-function ex_07_I(b,e){
+function pow(b,e){
 	//Si calcoli la potenza (x^y) di due numeri x y maggiori o uguali a zero, tramite l’utilizzo dei soli 
 	//operatori somma, sottrazione e della funzione mult. 
 	//.Esempio: 
@@ -161,7 +213,7 @@ function ex_07_I(b,e){
 	return b;
 }
 
-function ex_07_R(b,e){
+function powR(b,e){
 	//spazio: O()
 	//tempo:O()
 	if(e>0) {
@@ -171,8 +223,17 @@ function ex_07_R(b,e){
 		return b;
 	}
 }
+//Per Tiziano:
+function ex_7_I(b,e){
+	return pow(b,e);
+}
+//Per Tiziano:
+function ex_7_R(b,e)
+{
+	return powR(b,e);
+}
 /////////////////////////////////////////////////////////////////////////
-function ex_08_I(array) {
+function ArrayToMatrix(array) {
 	//Dato un array contenente n^2 elementi, scrivere un algoritmo che permetta di inserire tutti gli 
 	//oggetti in un array bidimensionale n x n
 	//spazio: O()
@@ -186,7 +247,7 @@ function ex_08_I(array) {
 	}
 }
 
-function ex_08_R(array) {
+function ArrayToMatrixR(array) {
 	//spazio: O()
 	//tempo:O()
 	l = sqrt(array.length);
@@ -196,5 +257,14 @@ function ex_08_R(array) {
 
 		}
 	}
+}
+
+//Per Tiziano:
+function ex_8_I(array) {
+	return ArrayToMatrix(array);
+}
+//Per Tiziano:
+function ex_8_R(array) {
+	return ArrayToMatrixR(array);
 }
 /////////////////////////////////////////////////////////////////////////
