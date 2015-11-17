@@ -3,23 +3,25 @@ function sumArray(array){
 	//itterativo
 	//spazio: O(1)
 	//tempo: O(n)
-	i = 0;
-	while ((i<array.length)&&(array[i]>=0)){
-		array += array[i];	
-		i++;
-	}
-	return array;
+    var tot = 0;
+    for(i = 0; i < array.length; ++i) {
+        var x = array[i];
+        if (x > 0) {
+            tot += x;
+        } 
+        else
+            return tot;
+    }
+    return tot;
 }
 
-function sumArrayR(array){
+function sumArrayR(array) {
 	//spazio: O(n)
 	//tempo: O(n)
-	if (array[i]>=0){
-		return array[i] + sumArray(array.slice(1));
-	}
-	else {
-		return array;
-	}
+	if (array.length == 0 || array[0] < 0)
+		return 0;
+	else
+		return array[0] + sumArrayR(array.slice(1));
 }
 
 //Per Tiziano;
