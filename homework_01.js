@@ -58,7 +58,7 @@ function avg(array){
 	//Dato un array di 10 elementi, calcolarne la media 
 	//itterativo
 	nVal = array.length;
-	for(i=0;i<nVal);i++){
+	for(i=0;i<nVal;i++){
 		array+=array[i];
 	}
 	return array/nVal;
@@ -104,11 +104,11 @@ function sumIntervalR(a,b){
 		a=b;
 		b=c;
 	}
-	if (a>0) {
-		return a+sumR(a--,b);
+	if (a==b){
+		return a; //or b
 	}
-	else {
-		return a;
+	else if (a>0) {
+		return a+sumR(a++,b);
 	}
 }
 
@@ -121,35 +121,29 @@ function ex_4_R(a,b){
 	return sumIntervalR(a,b);
 }
 /////////////////////////////////////////////////////////////////////////
-function MultSum(a,b){
 	//Si calcoli il prodotto di due numeri a, b maggiori o uguali a zero, tramite l’utilizzo del solo 
 	//operatore somma. 
 	//Esempio: 
 	//mult(2, 3) => 6 
+function MultSum(a,b){
 	//itterativo
-	if ((a=0)||b=0)){
+	var tot = 0;
+	if ((a==0)||(b==0)){
 		return 0;
 	}
-	else{
+	else {
 		for(i=0;i<b;i++){
-			a+=a;
+			tot+=a;
 		}
 	}
-	return a;
+	return tot;
 }
 
 
 function MultSumR(a,b){
-	//Si calcoli il prodotto di due numeri a, b maggiori o uguali a zero, tramite l’utilizzo del solo 
-	//operatore somma. 
-	//Esempio: 
-	//mult(2, 3) => 6 
 	//ricorsivo
 	if((a=0)||(b=0)){
 		return 0;
-	}
-	else if ((b<0)||(a<0)){
-		return "uno dei due numeri è uguale a 0";
 	}
 	else {
 		return a + mult(a, b--);
@@ -186,11 +180,11 @@ function DivSubR(dividendo,divisore){
 	//div(5, 3) => 1 resto 2
 	//ricorsivo
 	var i=0;
-	if(divisore<0)
-		return [i,dividendo];
+	if(dividendo<divisore)
+		return [0,dividendo];
 	else {
-		i++;
-		return dividendo - div(dividendo,divisore-1);
+		var res = DivSubR,(dividendo-divisore,divisore);
+		return [res[0] + 1, res[1]];
 	}
 }
 //Per Tiziano:
