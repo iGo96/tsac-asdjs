@@ -70,15 +70,6 @@ function MultWithSum(a,b){
 	//Esempio: 
 	//mult(2, 3) => 6 
 	//ricorsivo
-	if((a=0)||(b=0)){
-		return 0;
-	}
-	else if ((b<0)||(a<0)){
-		return "uno dei due numeri è uguale a 0";
-	}
-	else {
-		return a + mult(a, b--);
-	}
 }
 
 //Per Tiziano:
