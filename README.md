@@ -1,2 +1,2 @@
 # tsac-asdjs
-# this repository contains exercises made mainly in JS.
+this repository contains exercises made mainly in JS.
